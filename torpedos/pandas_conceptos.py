@@ -41,15 +41,6 @@ def carga_datos(nombre_resultado,nombre_archivo):
     #df.to_sql(name='test',con=engine,if_exists='replace',index=False)
     print(df)
 
-def carga_datos(nombre_resultado, nombre_archivo):
-    df = pd.read_excel(f'../excels_data/{nombre_archivo}')
-    df['n*j'] = df['n'] * df['j']
-    df['n/j'] = df['n'] / df['j']
-    df['n%j'] = df['n'] % df['j']
-    df['j^n'] = df['j'] ** df['n']
-    df.to_excel(f'../excels_resultado/{nombre_resultado}.xlsx', index=False)
-    # df.to_sql(name='test',con=engine,if_exists='replace',index=False)
-    print(df)
 
 def modificar_datos_loc(nombre_resultado, nombre_archivo):
     df = pd.read_excel(f'../excels_data/{nombre_archivo}')
